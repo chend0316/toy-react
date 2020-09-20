@@ -27,6 +27,8 @@ var div = createElement("div", {
 }, createElement("div", null), createElement("div", null));
 ```
 
+这个实验体现了 JSX 只是语法糖，不是模板。
+
 ### 阶段 1: 实现 createElement()
 
 createElement() 代码如下。
@@ -46,7 +48,7 @@ function createElement(tagName, attributes, ...children) {
 }
 ```
 
-完成实验后，我们就可以用 JSX 实现在 JavaScript 中编写 HTML。这个实验体现了 JSX 只是语法糖，不是模板。
+完成实验后，我们就可以用 JSX 实现在 JavaScript 中编写 HTML。
 
 ### 阶段 2: 实现类组件
 JSX 有个约定，当 tag 是小写开头的时候就会当做原生 HTML 标签处理，是大写开头的时候就会当做一个组件。组件是一个类，React Hooks 中组件也可以是函数式组件，为了简单我们不实现函数式组件。
