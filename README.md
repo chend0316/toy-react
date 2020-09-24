@@ -91,9 +91,7 @@ render(app, document.body);
 ## Day 2
 ### 阶段 3: 实现 rerender()
 
-这次实验要实现组件 State 状态变化时候的重新渲染，React 官方的 API 是使用 `this.setState()` 来实现设置新状态，同时触发重新渲染。
-
-因此本次实验的重点就是实现两个东西：
+这次实验要实现组件 State 状态变化时候的重新渲染，React 业务组件会调用 `this.setState()` 来实现设置新 State ，同时触发重新渲染。因此本次实验的重点就是实现两个东西：
 - `setState()` 接口
 - `rerender()` 重新渲染接口
 
@@ -105,4 +103,4 @@ render(app, document.body);
 
 本次实验结束有一个里程碑的突破：可以将 React 官方的 [井字棋 Demo](https://reactjs.org/tutorial/tutorial.html) 完整的跑起来。
 - Winter 老师课上的代码不支持函数式组件，需要对井字棋 Demo 小改后才能运行
-- 我的代码支持了函数式组件，不需要对井字棋 Demo 做任何修改就能跑起来
+- 我的代码支持函数式组件，不需要对井字棋 Demo 做任何修改
