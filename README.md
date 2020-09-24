@@ -87,3 +87,22 @@ render(app, document.body);
 实验的难点是要将组件类和 HTMLElement 统一，有两种方案。方案 1 不太靠谱，我们选用方案 2。
 1. 让组件类实现 HTMLElement 的接口，例如 `appendChild()`、`setAttribute()`
 2. 使用包装类技术，对 HTMLElement 进行包装
+
+## Day 2
+### 阶段 3: 实现 rerender()
+
+这次实验要实现组件 State 状态变化时候的重新渲染，React 官方的 API 是使用 `this.setState()` 来实现设置新状态，同时触发重新渲染。
+
+因此本次实验的重点就是实现两个东西：
+- `setState()` 接口
+- `rerender()` 重新渲染接口
+
+`setState()` 实际上是一个深覆盖接口，实现不是很难，跟 React 本身的关系也不大。
+
+`rerender()` 的实现是本次实验的重点，需要先删除旧节点，然后插入新渲染的节点。
+- Winter 老师课上是用 `range` 接口实现删除旧节点
+- 但是我为了提高难度，想了另一个办法实现
+
+本次实验结束有一个里程碑的突破：可以将 React 官方的 [井字棋 Demo](https://reactjs.org/tutorial/tutorial.html) 完整的跑起来。
+- Winter 老师课上的代码不支持函数式组件，需要对井字棋 Demo 小改后才能运行
+- 我的代码支持了函数式组件，不需要对井字棋 Demo 做任何修改就能跑起来
